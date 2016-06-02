@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Okra.Lifetime;
 using Okra.Builder;
-using Okra.MEF.DependencyInjection;
+using MEFExtensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using Xunit;
 using Okra.DependencyInjection;
 
-namespace Okra.MEF.Tests
+namespace Okra.DependencyInjection.MEF.Tests
 {
     public class OkraBootstrapperFixture
     {

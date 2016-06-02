@@ -7,8 +7,8 @@
 
   <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.Props" Condition="'$(VSToolsPath)' != ''" />
   <PropertyGroup Label="Globals">
-    <ProjectGuid>92f1b9fd-d6ce-4b38-972e-ed9358a2f33f</ProjectGuid>
-    <RootNamespace>Okra.MEF.Tests</RootNamespace>
+    <ProjectGuid>9776ecdf-1466-4c63-811a-43ef77994c3b</ProjectGuid>
+    <RootNamespace>Okra.DependencyInjection.MEF</RootNamespace>
     <BaseIntermediateOutputPath Condition="'$(BaseIntermediateOutputPath)'=='' ">.\obj</BaseIntermediateOutputPath>
     <OutputPath Condition="'$(OutputPath)'=='' ">.\bin\</OutputPath>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>

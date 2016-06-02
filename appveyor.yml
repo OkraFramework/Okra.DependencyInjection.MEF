@@ -24,10 +24,3 @@ deploy:
     secure: KpFpQ6mHOGMC9uWthYq91MxqWkYy522sUArvlA/27Rt2lKtKUe5Bpal2U8rRWW2V
   artifact: 
   symbol_server: http://nuget.gw.symbolsource.org/MyGet/okra/
-after_deploy:
-- ps: >-
-    Write-Host "WARNING: VSIX deployment disabled in appveyor.yml"
-
-    # Invoke-RestMethod -Uri https://www.myget.org/F/okra/vsix/upload -Method POST -InFile .\artifacts\OkraAppFramework-vs2013.vsix -Headers @{'X-NuGet-ApiKey'=$env:myget_apikey} -ContentType 'application/vsix'
-
-    # Invoke-RestMethod -Uri https://www.myget.org/F/okra/vsix/upload -Method POST -InFile .\artifacts\OkraAppFramework-vs2015.vsix -Headers @{'X-NuGet-ApiKey'=$env:myget_apikey} -ContentType 'application/vsix'

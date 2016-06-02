@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Okra.Lifetime;
 using Okra.Builder;
-using Okra.MEF.DependencyInjection;
+using MEFExtensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Okra.DependencyInjection;
 
-namespace Okra.MEF
+namespace Okra.DependencyInjection.MEF
 {
     public abstract class OkraBootstrapper : IOkraBootstrapper
     {

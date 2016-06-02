@@ -1,5 +1,4 @@
 ﻿using System.Reflection;
-using System.Resources;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
@@ -7,10 +6,9 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Andrew Wilkinson")]
-[assembly: AssemblyProduct("Okra.MEF")]
-[assembly: AssemblyTrademark("Copyright \u00A9 Andrew Wilkinson 2016")]
-[assembly: NeutralResourcesLanguage("en-us")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("Okra.DependencyInjection.MEF.Tests")]
+[assembly: AssemblyTrademark("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible
 // to COM components.  If you need to access a type in this assembly from
@@ -18,4 +16,4 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("9776ecdf-1466-4c63-811a-43ef77994c3b")]
+[assembly: Guid("92f1b9fd-d6ce-4b38-972e-ed9358a2f33f")]

@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Okra.MEF", "src\Okra.MEF\Okra.MEF.xproj", "{9776ECDF-1466-4C63-811A-43EF77994C3B}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Okra.DependencyInjection.MEF", "src\Okra.DependencyInjection.MEF\Okra.DependencyInjection.MEF.xproj", "{9776ECDF-1466-4C63-811A-43EF77994C3B}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Okra.MEF.Tests", "test\Okra.MEF.Tests\Okra.MEF.Tests.xproj", "{92F1B9FD-D6CE-4B38-972E-ED9358A2F33F}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Okra.DependencyInjection.MEF.Tests", "test\Okra.DependencyInjection.MEF.Tests\Okra.DependencyInjection.MEF.Tests.xproj", "{92F1B9FD-D6CE-4B38-972E-ED9358A2F33F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

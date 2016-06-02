@@ -4,12 +4,12 @@ If you find the Okra Framework useful and wish to contribute we would love to he
 
 ## Submitting feature requests
 
-* Submit any feature requests on [the Okra.MEF issue tracker](https://github.com/OkraFramework/Okra.MEF/issues).
+* Submit any feature requests on [the Okra.DependencyInjection.MEF issue tracker](https://github.com/OkraFramework/Okra.DependencyInjection.MEF/issues).
 * Check if anyone has already submitted a request for the same feature - if they have then feel free to add a comment to their request, even if it is just a "+1".
 
 ## Submitting bug reports
 
-* Submit any bug reports on [the Okra.MEF issue tracker](https://github.com/OkraFramework/Okra.MEF/issues).
+* Submit any bug reports on [the Okra.DependencyInjection.MEF issue tracker](https://github.com/OkraFramework/Okra.DependencyInjection.MEF/issues).
 * Try to include as much information as you can to describe the bug.
 * Include code snippets if possible.
 
@@ -17,7 +17,7 @@ If you find the Okra Framework useful and wish to contribute we would love to he
 
 If you would like to contribute code to the project then we would love to accept pull requests. A few simple guidelines to follow are,
 
-* For anything but the most simple changes, please add a feature request or bug report to [the issue tracker](https://github.com/OkraFramework/Okra.MEF/issues) stating that you would be interested in contributing. This lets the Okra Framework team and the community know you are looking into it, and starts a discussion about the best way to tackle the problem.
+* For anything but the most simple changes, please add a feature request or bug report to [the issue tracker](https://github.com/OkraFramework/Okra.DependencyInjection.MEF/issues) stating that you would be interested in contributing. This lets the Okra Framework team and the community know you are looking into it, and starts a discussion about the best way to tackle the problem.
 * Follow a similar coding style to the existing codebase.
 * Try to keep pull requests as small as possible - it makes it a lot easier for us to review the changes before merging into the main codebase.
 * Tests need to be provided for every bug/feature that is completed, except in very special circumstances.
