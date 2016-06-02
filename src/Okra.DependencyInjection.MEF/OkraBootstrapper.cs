@@ -13,40 +13,7 @@ namespace Okra.DependencyInjection.MEF
 {
     public abstract class OkraBootstrapper : IOkraBootstrapper
     {
-        // *** Fields ***
-
-        private IAppContainer _appContainer;
-        private AppLaunchDelegate _appLaunchPipeline;
-
         // *** Methods ***
-
-        public Task Activate()
-        {
-            if (!IsInitialized)
-                throw new InvalidOperationException(Resources.Exception_InvalidOperation_BootstrapperNotInitialized);
-
-            return _appContainer.Activate();
-        }
-
-        public Task Deactivate()
-        {
-            if (!IsInitialized)
-                throw new InvalidOperationException(Resources.Exception_InvalidOperation_BootstrapperNotInitialized);
-
-            return _appContainer.Deactivate();
-        }
-
-        public Task Launch(IAppLaunchRequest appLaunchRequest)
-        {
-            if (appLaunchRequest == null)
-                throw new ArgumentNullException(nameof(appLaunchRequest));
-
-            if (!IsInitialized)
-                throw new InvalidOperationException(Resources.Exception_InvalidOperation_BootstrapperNotInitialized);
-
-            AppLaunchContext appLaunchContext = new MefAppLaunchContext(appLaunchRequest);
-            return _appLaunchPipeline(appLaunchContext);
-        }
 
         public void Initialize()
         {
@@ -56,22 +23,11 @@ namespace Okra.DependencyInjection.MEF
             ConfigureServices(serviceCollection);
             var serviceProvider = serviceCollection.BuildServiceProvider();
 
-            var appContainerFactory = serviceProvider.GetRequiredService<IAppContainerFactory>();
-            _appContainer = appContainerFactory.CreateAppContainer();
 
-            // Create the OkraAppBuilder and configure the application
+            // Get the IOkraAppBuilder and configure the application
 
-            OkraAppBuilder appBuilder = new OkraAppBuilder(_appContainer.Services);
+            IOkraAppBuilder appBuilder = serviceProvider.GetRequiredService<IOkraAppBuilder>();
             Configure(appBuilder);
-            _appLaunchPipeline = appBuilder.Build();
-        }
-
-        private bool IsInitialized
-        {
-            get
-            {
-                return _appLaunchPipeline != null;
-            }
         }
 
         // *** Protected Methods ***
@@ -82,21 +38,6 @@ namespace Okra.DependencyInjection.MEF
 
         protected virtual void ConfigureServices(IServiceCollection services)
         {
-        }
-
-        // *** Private sub-classes ***
-
-        private class MefAppLaunchContext : AppLaunchContext
-        {
-            public MefAppLaunchContext(IAppLaunchRequest launchRequest)
-            {
-                this.LaunchRequest = launchRequest;
-            }
-
-            public override IAppLaunchRequest LaunchRequest
-            {
-                get;
-            }
         }
     }
 }
