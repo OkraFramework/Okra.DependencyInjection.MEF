@@ -15,6 +15,16 @@ namespace Okra.DependencyInjection.MEF.Tests
     public class OkraBootstrapperFixture
     {
         [Fact]
+        public void Initialize_SetsApplicationServices()
+        {
+            TestableBootstrapper bootstrapper = new TestableBootstrapper();
+
+            bootstrapper.Initialize();
+            
+            Assert.NotNull(bootstrapper.ApplicationServices);
+        }
+        
+        [Fact]
         public void Initialize_CallsConfigureServicesThenConfigure()
         {
             TestableBootstrapper bootstrapper = new TestableBootstrapper();
@@ -52,6 +62,16 @@ namespace Okra.DependencyInjection.MEF.Tests
             Assert.NotNull(appBuilder);
             Assert.Equal(bootstrapper.OkraAppBuilder, appBuilder);
         }
+        
+        [Fact] 
+        public void ApplicationServices_ThrowsException_IfNotInitialized() 
+        { 
+            TestableBootstrapper bootstrapper = new TestableBootstrapper(); 
+            
+            var e = Assert.Throws<InvalidOperationException>(() => { var s = bootstrapper.ApplicationServices; }); 
+            Assert.Equal("The bootstrapper must be initialized before performing this operation.", e.Message); 
+         } 
+
 
         // *** Test Classes ***
 

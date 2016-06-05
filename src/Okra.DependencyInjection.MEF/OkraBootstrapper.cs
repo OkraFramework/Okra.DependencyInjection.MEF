@@ -13,6 +13,21 @@ namespace Okra.DependencyInjection.MEF
 {
     public abstract class OkraBootstrapper : IOkraBootstrapper
     {
+        private IServiceProvider _applicationServices;
+        
+        // *** Properties ***
+        
+        public IServiceProvider ApplicationServices
+        {
+            get
+            {
+                if (_applicationServices == null)
+                    throw new InvalidOperationException(Resources.Exception_InvalidOperation_BootstrapperNotInitialized);
+                    
+                return _applicationServices;
+            }
+        }
+        
         // *** Methods ***
 
         public void Initialize()
@@ -21,12 +36,12 @@ namespace Okra.DependencyInjection.MEF
 
             var serviceCollection = new ServiceCollection();
             ConfigureServices(serviceCollection);
-            var serviceProvider = serviceCollection.BuildServiceProvider();
+            _applicationServices = serviceCollection.BuildServiceProvider();
 
 
             // Get the IOkraAppBuilder and configure the application
 
-            IOkraAppBuilder appBuilder = serviceProvider.GetRequiredService<IOkraAppBuilder>();
+            IOkraAppBuilder appBuilder = ApplicationServices.GetRequiredService<IOkraAppBuilder>();
             Configure(appBuilder);
         }
 
