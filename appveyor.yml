@@ -9,7 +9,7 @@ environment:
 build_script:
 - ps: |
     $versionSuffix = "alpha{0:000}" -f [convert]::ToInt32($env:APPVEYOR_BUILD_VERSION)
-    .\build.ps1 -versionSuffix $versionSuffix
+    .\build.ps1 -versionSuffix=$versionSuffix
     if($LastExitCode -ne 0) { $host.SetShouldExit($LastExitCode )  }
 test: off
 artifacts:
