@@ -30,3 +30,4 @@ Else
 
 $buildScript = Join-Path $okraBuildTools "build.ps1"
 Invoke-Expression "& `"$buildScript`" $Args"
+exit $LASTERRORCODE
