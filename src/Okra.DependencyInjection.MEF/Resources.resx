@@ -120,4 +120,7 @@
   <data name="Exception_InvalidOperation_BootstrapperNotInitialized" xml:space="preserve">
     <value>The bootstrapper must be initialized before performing this operation.</value>
   </data>
+  <data name="Exception_ArgumentException_StringIsNullOrEmpty" xml:space="preserve">
+    <value>The argument cannot be null or an empty string.</value>
+  </data>
 </root>

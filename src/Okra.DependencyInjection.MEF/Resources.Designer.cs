@@ -69,5 +69,14 @@ namespace Okra.DependencyInjection.MEF {
                 return ResourceManager.GetString("Exception_InvalidOperation_BootstrapperNotInitialized", resourceCulture);
             }
         }
+
+        /// <summary>
+        ///   Looks up a localized string similar to The argument cannot be null or an empty string..
+        /// </summary>
+        internal static string Exception_ArgumentException_StringIsNullOrEmpty {
+            get {
+                return ResourceManager.GetString("Exception_ArgumentException_StringIsNullOrEmpty", resourceCulture);
+            }
+        }
     }
 }

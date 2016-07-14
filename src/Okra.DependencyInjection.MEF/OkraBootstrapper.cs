@@ -35,9 +35,12 @@ namespace Okra.DependencyInjection.MEF
             // Initialize MEF and compose the bootstrapper
 
             var serviceCollection = new ServiceCollection();
+            
+            serviceCollection.AddScoped<IViewFactory, ViewFactory>()
+                             .AddScoped<IViewModelFactory, ViewModelFactory>();
+
             ConfigureServices(serviceCollection);
             _applicationServices = serviceCollection.BuildServiceProvider();
-
 
             // Get the IOkraAppBuilder and configure the application
 
