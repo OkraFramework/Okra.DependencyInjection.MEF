@@ -1,6 +1,3 @@
-using System;
-using Okra.DependencyInjection.MEF;
-
 namespace Okra.DependencyInjection.MEF.Tests.Mocks
 {
     public class MockViewFactory : IViewFactory
