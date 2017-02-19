@@ -19,8 +19,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Okra.Core\src\Okra.Core\Okra.Core.csproj" />
-    <ProjectReference Include="..\..\..\MEFExtensions.DependencyInjection\src\MEFExtensions.DependencyInjection\MEFExtensions.DependencyInjection.csproj" />
+    <PackageReference Include="Okra.Core" Version="2.0.0-*" />
+    <PackageReference Include="MEFExtensions.DependencyInjection" Version="1.0.0-*" />
   </ItemGroup>
 
 </Project>
